@@ -22,7 +22,7 @@ public class HdfsApiDemo {
     @Test
     public void 权限访问控制() throws Exception {
         //1: 获取FileSystem实例
-        FileSystem fileSystem = FileSystem.get(new URI("hdfs://node01:8020")
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://localhost:8020")
                 , new Configuration());
 
         fileSystem.copyToLocalFile(new Path("/a.txt")
@@ -107,7 +107,7 @@ public class HdfsApiDemo {
     @Test
     public void listFiles() throws Exception {
         //1: 获取FileSystem实例
-        FileSystem fileSystem = FileSystem.get(new URI("hdfs://hadoop102:8020")
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://localhost:8020")
                 , new Configuration());
 
         //2: 调用方法listFiles获取 / 目录所有的文件信息
