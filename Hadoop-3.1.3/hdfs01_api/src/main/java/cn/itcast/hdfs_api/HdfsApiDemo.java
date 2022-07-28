@@ -55,7 +55,7 @@ public class HdfsApiDemo {
     public void downLoadFile2() throws Exception {
         //1: 获取FileSystem实例
         FileSystem fileSystem = FileSystem.get(new URI("hdfs://node01:8020")
-                , new Configuration());
+                , new Configuration(), "root");
 
         fileSystem.copyToLocalFile(new Path("/a.txt")
                 , new Path("D://hello/mydir/test"));
